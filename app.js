@@ -7,18 +7,18 @@ document.addEventListener("DOMContentLoaded", function() {
   const executorTextBox = document.getElementById("executorTextBox");
 
   showExecutorBtn.addEventListener("click", function() {
-    executor.style.display = "block";
+    executor.style.display = "block"; // Show the executor UI
   });
 
   closeExecutorBtn.addEventListener("click", function() {
-    executor.style.display = "none";
+    executor.style.display = "none"; // Hide the executor UI
   });
 
   clearBtn.addEventListener("click", function() {
-    executorTextBox.value = "";
+    executorTextBox.value = ""; // Clear the textbox content
   });
 
   exeBtn.addEventListener("click", function() {
-    alert("EXE button clicked!");
+    alert("EXE button clicked!"); // For testing the button
   });
 });
