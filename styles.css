@@ -1,4 +1,4 @@
-/* Basic styles for a small UI */
+/* Make the floating PIP UI */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -20,15 +20,16 @@ body {
 }
 
 .executor {
-    display: none;
-    position: fixed;
+    position: fixed; /* Fixes the executor UI on the screen */
     top: 20px;
     right: 20px;
     background-color: white;
     border: 1px solid #ddd;
     padding: 10px;
     width: 250px;
-    z-index: 9999;
+    z-index: 9999; /* Ensures it stays on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .executor-header {
@@ -51,6 +52,7 @@ body {
     margin: 8px 0;
     border: 1px solid #ddd;
     font-size: 14px;
+    border-radius: 5px;
 }
 
 .executor-body button {
@@ -61,4 +63,19 @@ body {
     border: none;
     cursor: pointer;
     margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Optional: Add animation for the PIP effect */
+.executor {
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        right: -260px;
+    }
+    to {
+        right: 20px;
+    }
 }
